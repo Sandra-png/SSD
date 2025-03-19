@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Download files</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    </head>
+    <body>
+        <h1>Download your files</h1>
+        <a href="/" class="back-button"> < </a>
+
+        <div class = "box">
+            
+            {% if files_to_download %}
+                <div>
+                    {% for filename in files_to_download %}
+                        <p><a href="{{ url_for('download_file_by_filename', filename=filename, token=token) }}" download>{{ filename }}</a></p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No files available for download.</p>
+            {% endif %}
+
+        </div>
+    </body>
+</html>

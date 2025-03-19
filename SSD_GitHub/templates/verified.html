@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Verified</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+    </head>
+    <body>
+        <h1>Welcome to the main page!</h1>
+        <a href="/" class="back-button"> < </a>
+
+        <div class = "box">
+            <a href = "{{ url_for('reset_password_page', token=token) }}" class = "reset_password"> <button>Reset your Password</button> </a>
+            <a href = "{{ url_for('file_management', token=token) }}" class = "file_management"> <button>File Management Page</button> </a>
+        </div>
+
+    </body>
+</html>

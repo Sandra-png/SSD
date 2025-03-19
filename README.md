@@ -17,14 +17,16 @@ and file download, following best security practices.
 - Secure file upload with access control
 - Secure file download with authentication checks
 
-## Security Measures
+
+# Security Measures
 - SQL injection prevention with parameterized queries
 - Cross-Site Scripting (XSS) protection with input validation
 - API authentication with JWT-based access tokens
 - Secure storage of API keys and tokens
 - Docker setup for isolated and controlled execution environment
 
-## Testing the Application
+
+# Testing the Application
 Tests were conducted by running Bandit. Penetration attacks were done using OWASP Zap, and scanned for:
   - Broken access control
   - SQL Injections
